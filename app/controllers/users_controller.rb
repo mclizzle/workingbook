@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   	case params[:people]
   	when "friends"
   		@users = current_user.active_friends
-  	when "requested"
+  	when "requests"
   		@users = current_user.pending_friend_requests_from
   	when "pending"
   		@users = current_user.pending_friend_requests_to
@@ -28,3 +28,5 @@ class UsersController < ApplicationController
   end
   
 end
+
+
